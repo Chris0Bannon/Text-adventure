@@ -7,7 +7,7 @@
   <body>
     <img id="img">
     <p id="output"></p>
-    <input type="text">
+    <input id= "input" type="text" placeholder="Enter your action here...">
     <button>Enter</button>
 
     <script>
@@ -22,11 +22,93 @@
       map[8] = "Verdant Timberline";
       map[9] = "Overgrown Woodland";
 
-      var mapLocation = 8;
+      // set players start locations
+      var mapLocation = 7;
 
+      //initialize the players input
+      var playersInput = "";
+
+      //initialize the gameMessage
+      var gameMessage = "";
+
+      //Create and array of actions that the game understands
+      //and a variable to store the current action
+      var actionIKnow = ["north", "east", "south", "west"];
+      var action = "";
+
+      //The input and output fields
       var output = document.querySelector("#output");
+      var input = document.querySelector("#input");
 
+      //The button
+      var button = document.querySelector("button");
+      button.style.cursor = "pointer";
+      button.addEventListener("click", clickHandler, false);
+
+      //Display the players location
+      render();
+
+      function clickHandler()
+      {
+          playGame();
+      }
+
+      function playGame()
+      {
+        //Get the player's input and convert it into lowercase
+        playersInput =  input.value;
+        playersInput = playersInput.toLowerCase();
+
+        //Reset these variables from the previous turn
+        gameMessage = "";
+        action = "";
+
+        //Figure out the players action
+        for(var i = 0; i < actionIKnow.length; i ++)
+          {if(playersInput.indexOf(actionIKnow[i]) !== -1)
+            {
+              action = actionIKnow[i];
+              console.log("player's action: " + action);
+              break;
+            }
+          }
+
+        //Choose the correct action
+        switch(action)
+        {
+          case "north":
+            mapLocation -= 3;
+            break;
+
+          case "east":
+            mapLocation += 1;
+            break;
+
+          case "south":
+            mapLocation +=3;
+            break;
+
+          case "west":
+            mapLocation -=1;
+            break;
+
+          default:
+          gameMessage = "Sorry, I dont understand that.";
+        }
+
+        //Render the game
+        render();
+      }
+
+      function render ()
+    {
+      //Render the location
       output.innerHTML = map[mapLocation];
+
+      //Display the gameMessage
+      output.innerHTML += "<br><em>" + gameMessage + "</em>";
+
+    }
 
     </script>
   </body>
