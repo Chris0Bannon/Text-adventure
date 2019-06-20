@@ -2,6 +2,10 @@ Hello, below are some game notes.
 
 Setting;  Our adventure takes place in the Hidden Valley Forest.  The forest is ancient and has many magical qualities that have yet to be identified.  It is mostly uninhabited by mankind, although the developer has a growing interest in forest. He believes that the forest can be purchased and turned into a valuable real estate venture.
 
+Map: view the map on google draw,
+
+https://docs.google.com/drawings/d/1WVd7Th-AJnlalZzkKvxp-M61i1xGpMQVxzc858fsqy8/edit?usp=sharing
+
 
 Characters;
 	-The Ranger: the ranger is the player controlled character.  The Ranger is sworn to uphold the law of the woods and protect the forest from outside influences.  While investigating a recent disturbance in the in the hidden valley wood, the ranger is ravaged by a storm.  The ranger awakens stranded and and missing her supplies in a section of the forest that she is unfamiliar with.  The players goal is to escape the forest safely as well as find clues to the forests disturbance. 
