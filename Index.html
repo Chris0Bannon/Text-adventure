@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Spirit of the forest</title>
+  </head>
+  <body>
+    <img id="img">
+    <p id="output"></p>
+    <input type="text">
+    <button>Enter</button>
+
+    <script>
+      var map = [];
+      map[1] = "Deep Wood";
+      map[2] = "Treefolk's Crossing";
+      map[3] = "Crone's Hut";
+      map[4] = "Hermits Thicket";
+      map[5] = "Ancient Grove";
+      map[6] = "Spore Garden";
+      map[7] = "Forest's Edge";
+      map[8] = "Verdant Timberline";
+      map[9] = "Overgrown Woodland";
+
+      var mapLocation = 8;
+
+      var output = document.querySelector("#output");
+
+      output.innerHTML = map[mapLocation];
+
+    </script>
+  </body>
+</html>
