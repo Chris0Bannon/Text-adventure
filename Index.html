@@ -5,22 +5,38 @@
     <title>Spirit of the forest</title>
   </head>
   <body>
+    <image src="" width="480" height="270"></image>
     <img id="img">
     <p id="output"></p>
     <input id= "input" type="text" placeholder="Enter your action here...">
     <button>Enter</button>
 
     <script>
+
+      //Create the map
       var map = [];
-      map[1] = "Deep Wood";
-      map[2] = "Treefolk's Crossing";
-      map[3] = "Crone's Hut";
-      map[4] = "Hermits Thicket";
-      map[5] = "Ancient Grove";
-      map[6] = "Spore Garden";
-      map[7] = "Forest's Edge";
-      map[8] = "Verdant Timberline";
-      map[9] = "Overgrown Woodland";
+      map[0] = "Deep Wood";
+      map[1] = "Treefolk's Crossing";
+      map[2] = "Crone's Hut";
+      map[3] = "Hermits Thicket";
+      map[4] = "Ancient Grove";
+      map[5] = "Spore Garden";
+      map[6] = "Forest's Edge";
+      map[7] = "Verdant Timberline";
+      map[8] = "Overgrown Woodland";
+
+      //Create the images
+      var image = [];
+      map[0] = "Deep Wood";
+      map[1] = "Treefolk's Crossing";
+      map[2] = "Crone's Hut";
+      map[3] = "Hermits Thicket";
+      map[4] = "Ancient Grove";
+      map[5] = "Spore Garden";
+      map[6] = "Forest's Edge";
+      map[7] = "Verdant Timberline";
+      map[8] = "Overgrown Woodland";
+
 
       // set players start locations
       var mapLocation = 7;
@@ -39,6 +55,9 @@
       //The input and output fields
       var output = document.querySelector("#output");
       var input = document.querySelector("#input");
+
+      //The images
+      var image = document.querySelector("img");
 
       //The button
       var button = document.querySelector("button");
@@ -104,6 +123,9 @@
     {
       //Render the location
       output.innerHTML = map[mapLocation];
+
+      //Change the image source
+      image.src = "img/" + img[mapLocation];
 
       //Display the gameMessage
       output.innerHTML += "<br><em>" + gameMessage + "</em>";
