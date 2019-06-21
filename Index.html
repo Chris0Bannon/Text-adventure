@@ -5,8 +5,7 @@
     <title>Spirit of the forest</title>
   </head>
   <body>
-    <image src="" width="480" height="270"></image>
-    <img id="img">
+    <image src="" width="640" height="480"></image>
     <p id="output"></p>
     <input id= "input" type="text" placeholder="Enter your action here...">
     <button>Enter</button>
@@ -26,20 +25,21 @@
       map[8] = "Overgrown Woodland";
 
       //Create the images
-      var image = [];
-      map[0] = "Deep Wood";
-      map[1] = "Treefolk's Crossing";
-      map[2] = "Crone's Hut";
-      map[3] = "Hermits Thicket";
-      map[4] = "Ancient Grove";
-      map[5] = "Spore Garden";
-      map[6] = "Forest's Edge";
-      map[7] = "Verdant Timberline";
-      map[8] = "Overgrown Woodland";
+      var images = [];
+
+      images[0] = "deepWood.jpg";
+      images[1] = "treefolksCrossing.jpg";
+      images[2] = "cronesHut.jpg";
+      images[3] = "hermitsThicket.jpg";
+      images[4] = "ancientGrove.jpg";
+      images[5] = "sporeGarden.jpg";
+      images[6] = "forestsEdge.jpg";
+      images[7] = "verdantTimberline.jpg";
+      images[8] = "overgrownWoodland.jpg";
 
 
       // set players start locations
-      var mapLocation = 7;
+      var mapLocation = 2;
 
       //initialize the players input
       var playersInput = "";
@@ -125,7 +125,7 @@
       output.innerHTML = map[mapLocation];
 
       //Change the image source
-      image.src = "img/" + img[mapLocation];
+      image.src = "images/" + images[mapLocation];
 
       //Display the gameMessage
       output.innerHTML += "<br><em>" + gameMessage + "</em>";
