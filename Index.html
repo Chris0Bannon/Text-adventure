@@ -37,9 +37,20 @@
       images[7] = "verdantTimberline.jpg";
       images[8] = "overgrownWoodland.jpg";
 
+      //Blocked path messages add in array for specific locations
+      var blockedPathMessages = [];
+      blockedPathMessages[0] = "You can't go that way!";
+      blockedPathMessages[1] = "Don'go north anymore, there is nothing cool over there.";
+      blockedPathMessages[2] = "Idk, Fuck you, the game is supposed to end here but I dont know how to do that yet.";
+      blockedPathMessages[3] = "You like, cant head any further west, because of some plot reason, or something..";
+      blockedPathMessages[4] = "This code shouldn't actually appear in game until I get better at path blocking logic.";
+      blockedPathMessages[5] = "Don't go West anymore, it sucks over there.";
+      blockedPathMessages[6] = "Why would you try leaving the way you came? thats not very adventurous of you.";
+      blockedPathMessages[7] = "You not able to head south here because";
+      blockedPathMessages[8] = "You can't go that way!";
 
       // set players start locations
-      var mapLocation = 2;
+      var mapLocation = 5;
 
       //initialize the players input
       var playersInput = "";
@@ -75,7 +86,7 @@
       function playGame()
       {
         //Get the player's input and convert it into lowercase
-        playersInput =  input.value;
+        playersInput = input.value;
         playersInput = playersInput.toLowerCase();
 
         //Reset these variables from the previous turn
@@ -96,23 +107,51 @@
         switch(action)
         {
           case "north":
+            if (mapLocation >= 3)
+            {
+              gameMessage = "You went north!";
             mapLocation -= 3;
-            break;
+          }
+          else {
+            gameMessage = blockedPathMessages[mapLocation];
+          }
+          break;
 
           case "east":
-            mapLocation += 1;
-            break;
+          if (mapLocation % 3 != 2)
+          {
+          gameMessage = "You went east!";
+          mapLocation += 1;
+        }
+        else {
+          gameMessage = blockedPathMessages[mapLocation];
+        }
+        break;
 
           case "south":
-            mapLocation +=3;
-            break;
+          if (mapLocation < 6)
+          {
+          gameMessage = "you went south";
+          mapLocation += 3;
+        }
+        else {
+          gameMessage = blockedPathMessages[mapLocation];
+        }
+        break;
 
           case "west":
-            mapLocation -=1;
-            break;
+          if (mapLocation % 3 != 0)
+          {
+          gameMessage = "You went west!";
+          mapLocation -= 1;
+        }
+        else {
+          gameMessage = blockedPathMessages[mapLocation];
+        }
+        break;
 
           default:
-          gameMessage = "Sorry, I dont understand that.";
+          gameMessage = "Sorry, I dont what the fuck " + playersInput + " is, try it again dummy!";
         }
 
         //Render the game

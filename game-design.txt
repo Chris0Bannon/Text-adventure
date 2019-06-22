@@ -16,3 +16,10 @@ Characters;
 	-Pup/Dire Hound/Dire Wolf: A magical creature that grows as you progress through the game (squares 1-3 = wolf, squares 4-6 hound, squares 7-9 Pup.  The creature does the bidding for the mother of the forest and often communicates on her behalf.  Upon reaching square 3 the Dire Wolf will run ahead into the crones hut.  Once inside the hit the player will find no trace of the Wolf.
 
 Plot: Ranger enters the map in square 7.  There the player encounters
+
+To do's;
+
+Monkey around with Css
+Create a dropdown box rather than a free entry input
+
+
