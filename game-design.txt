@@ -21,5 +21,7 @@ To do's;
 
 Monkey around with Css
 Create a dropdown box rather than a free entry input
-
+Make it so that commands with dual directions don't suck.
+Include instructions
+Somehow come up with story interaction.
 
