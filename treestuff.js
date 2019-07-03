@@ -1,7 +1,7 @@
 
 
   //Create the map
-  var map = [];
+  let map = [];
   map[0] = "Deep Wood";
   map[1] = "Treefolk's Crossing";
   map[2] = "Crone's Hut";
@@ -13,7 +13,7 @@
   map[8] = "Overgrown Woodland";
 
   //Create the images
-  var images = [];
+  let images = [];
 
   images[0] = "deepWood.jpg";
   images[1] = "treefolksCrossing.jpg";
@@ -25,8 +25,20 @@
   images[7] = "verdantTimberline.jpg";
   images[8] = "overgrownWoodland.jpg";
 
+  //initialize the story
+  let plotMessage = [];
+  plotMessage[0] = "idk my bff jill";
+  plotMessage[1] = "just trying this out2";
+  plotMessage[2] = "just trying this out3";
+  plotMessage[3] = "just trying this out4";
+  plotMessage[4] = "just trying this out5";
+  plotMessage[5] = "just trying this out6";
+  plotMessage[6] = "You awaken to warm and wet tongue licking your face.  You eyes peel open and are greeted with the slobbery smile of an incredibly large puppy.  You look around at your surroundings as you climb to seated position.  You find yourself in an expansive clearing surronded by a thick forestline bathed in moonlight. You are without your compass and map, but as a forest ranger you are without worry.  As you climb to your feet the pup playfully runs to the treeline.  It looks back to you just before dissapearing into the shadows of the forest.";
+  plotMessage[7] = "just trying this out8";
+  plotMessage[8] = "just trying this out9";
+
   //Blocked path messages add in array for specific locations
-  var blockedPathMessages = [];
+  let blockedPathMessages = [];
   blockedPathMessages[0] = "You can't go that way!";
   blockedPathMessages[1] = "Don'go north anymore, there is nothing cool over there.";
   blockedPathMessages[2] = "Idk, the game is supposed to end here but I dont know how to do that yet.";
@@ -37,29 +49,30 @@
   blockedPathMessages[7] = "You not able to head south here because something";
   blockedPathMessages[8] = "Careful!  The edge of the earth is over there! Dont fall off!";
 
+
   // set players start locations
-  var mapLocation = 5;
+  let mapLocation = 6;
 
   //initialize the players input
-  var playersInput = "";
+  let playersInput = "";
 
   //initialize the gameMessage
-  var gameMessage = "";
+  let gameMessage = "";
 
   //Create and array of actions that the game understands
   //and a variable to store the current action
-  var actionIKnow = ["north", "east", "south", "west"];
-  var action = "";
+  let actionIKnow = ["north", "east", "south", "west"];
+  let action = "";
 
   //The input and output fields
-  var output = document.querySelector("#output");
-  var input = document.querySelector("#input");
+  let output = document.querySelector("#output");
+  let input = document.querySelector("#input");
 
   //The images
-  var image = document.querySelector("img");
+  let image = document.querySelector("img");
 
   //The button
-  var button = document.querySelector("button");
+  let button = document.querySelector("button");
   button.style.cursor = "pointer";
   button.addEventListener("click", clickHandler, false);
 
@@ -80,6 +93,7 @@
     //Reset these variables from the previous turn
     gameMessage = "";
     action = "";
+
 
     //Figure out the players action
     for(var i = 0; i < actionIKnow.length; i ++)
@@ -149,12 +163,14 @@
   function render ()
 {
   //Render the location
-  output.innerHTML = map[mapLocation];
+  output.innerHTML = "<p id = maps>" + "You are now in the "  + map[mapLocation] + "</p>";
 
   //Change the image source
   image.src = "images/" + images[mapLocation];
 
-  //Display the gameMessage
-  output.innerHTML += "<br><em>" + gameMessage + "</em>";
+  //Display  the plotMessage
+  output.innerHTML += "<p id = plotMessage>" + plotMessage[mapLocation] + "</p>";
 
+  //Display the gameMessage
+  output.innerHTML += "<p id = gameMessage>" + gameMessage + "</p>";
 }

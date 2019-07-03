@@ -48,6 +48,29 @@ button{
   border-radius: 50%;
 }
 
+em{
+  font-size: 88px;
+}
+
+#maps{
+  
+}
+
+#plotMessage{
+  font-size: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#gameMessage{
+  font-size: 20px;
+  color: #ff8000;
+  font-style: bold;
+  text-decoration: overline underline;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
 p{
   text-align: center;
   font-size: 32px;
