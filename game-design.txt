@@ -24,3 +24,6 @@ Create a dropdown box rather than a free entry input
 Make it so that commands with dual directions don't suck.
 Include instructions
 Somehow come up with story interaction.
+
+Thoughts and Notes;
+Dialogue from Father or hermit: "The trees here were my friends.  They had voices of their own.  They called these shores home long before you and yours were but seeds and acorns.  Perhaps their roots still tend their soil, though i can not hear their songs.  I hope that my deer friend river has carried their children far away to safety, and they shall someday sing downstream. I weep fresh sap for the lose of my family.  The face of Death is welcome in here in our home, but how he has chosen to wield your kind as his instrument, I cannot.  You were once the younger branches of our tree.  How the bough has changed since falling to the floor."
