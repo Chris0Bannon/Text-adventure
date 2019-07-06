@@ -53,20 +53,23 @@ em{
 }
 
 #maps{
-  
+
 }
 
 #plotMessage{
   font-size: 20px;
+  background-color: lightgrey;
+  border: black;
+  border-width: thick;
   margin-top: auto;
   margin-bottom: auto;
 }
 
 #gameMessage{
   font-size: 20px;
-  color: #ff8000;
+  color: #cc8800;
   font-style: bold;
-  text-decoration: overline underline;
+  text-decoration: underline;
   margin-bottom: auto;
   margin-top: auto;
 }

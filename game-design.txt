@@ -27,3 +27,5 @@ Somehow come up with story interaction.
 
 Thoughts and Notes;
 Dialogue from Father or hermit: "The trees here were my friends.  They had voices of their own.  They called these shores home long before you and yours were but seeds and acorns.  Perhaps their roots still tend their soil, though i can not hear their songs.  I hope that my deer friend river has carried their children far away to safety, and they shall someday sing downstream. I weep fresh sap for the lose of my family.  The face of Death is welcome in here in our home, but how he has chosen to wield your kind as his instrument, I cannot.  You were once the younger branches of our tree.  How the bough has changed since falling to the floor."
+
+Dialogue for mother or father:  "Hello my little nut.  It was not longer ago you sprung from our branches to travel far and grow a forest of your own.  time has changed you, as it does all things, but still i recognize you my child, and still i shall cradle you beneath the warmth of my branches."

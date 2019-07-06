@@ -33,7 +33,7 @@
   plotMessage[3] = "just trying this out4";
   plotMessage[4] = "just trying this out5";
   plotMessage[5] = "just trying this out6";
-  plotMessage[6] = "You awaken to warm and wet tongue licking your face.  You eyes peel open and are greeted with the slobbery smile of an incredibly large puppy.  You look around at your surroundings as you climb to seated position.  You find yourself in an expansive clearing surronded by a thick forestline bathed in moonlight. You are without your compass and map, but as a forest ranger you are without worry.  As you climb to your feet the pup playfully runs to the treeline.  It looks back to you just before dissapearing into the shadows of the forest.";
+  plotMessage[6] = "You awaken to warm and wet tongue licking your face.  You eyes peel open and are greeted with the slobbery smile of an incredibly large puppy.  You look around at your surroundings as you climb to seated position.  You find yourself in an expansive clearing surronded by a thick forestline bathed in moonlight. You are without your compass and map, but as a forest ranger you are without worry.  As you climb to your feet the pup playfully runs into the treeline to your north west.  The pup pauses to look back to you before dissapearing into the shadows of the forest.";
   plotMessage[7] = "just trying this out8";
   plotMessage[8] = "just trying this out9";
 
@@ -45,8 +45,8 @@
   blockedPathMessages[3] = "You like, cant head any further west, because of some plot reason, or something..";
   blockedPathMessages[4] = "This code shouldn't actually appear in game until I get better at path blocking logic.";
   blockedPathMessages[5] = "Don't go West anymore, it sucks over there.";
-  blockedPathMessages[6] = "Why would you try leaving the way you came? thats not very adventurous of you.";
-  blockedPathMessages[7] = "You not able to head south here because something";
+  blockedPathMessages[6] = "You should really stick with the puppy.  he is probably a plot device of some sort to guide your adventure.  Try heading north or east to follow him.";
+  blockedPathMessages[7] = "you're definetly headed the wrong way.  Try something else.";
   blockedPathMessages[8] = "Careful!  The edge of the earth is over there! Dont fall off!";
 
 
