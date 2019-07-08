@@ -24,6 +24,8 @@ h2{
   font-family: fantasy;
   color: #4dff88;
   text-align: center;
+  margin-top: none;
+  margin-bottom: none;
   margin-bottom: auto;
   margin-bottom: auto;
 }
@@ -51,6 +53,11 @@ em{
   font-size: 88px;
 }
 
+#gameWindow{
+  border-style: groove;
+
+}
+
 #maps{
 
 }
@@ -60,6 +67,7 @@ em{
   width: 640px;
   font-size: 20px;
   background-color: lightgrey;
+  margin-bottom: none;
   margin-top: auto;
   margin-bottom: auto;
 }
