@@ -169,7 +169,7 @@
   image.src = "images/" + images[mapLocation];
 
   //Display  the plotMessage
-  output.innerHTML += "<p id = plotMessage>" + plotMessage[mapLocation] + "</p>";
+  output.innerHTML += "<textarea id = plotMessage>" + plotMessage[mapLocation] + "</textarea>";
 
   //Display the gameMessage
   output.innerHTML += "<p id = gameMessage>" + gameMessage + "</p>";
