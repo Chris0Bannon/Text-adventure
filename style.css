@@ -1,7 +1,7 @@
 @keyframes trippyborder {
 0% {border-style: dotted;}
 50% {border-style: dashed;}
-100% {border-style: solid;}
+100% {border-style: dotted;}
 from {border-color: #05386B;}
 to {border-color: #8EE4af;}
 }
@@ -10,8 +10,10 @@ img {
   object-fit: contain;
   max-width: 70%;
   max-height: 70%;
-  border-style: double;
-  border-color: #8EE4af;
+  animation-name: trippyborder;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
   display: block;
   margin-top: auto;
   margin-bottom: 4px;
@@ -67,9 +69,10 @@ em{
 
 #gameWindow{
   animation-name: trippyborder;
-  animation-duration: 6s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
-  border-width: 10px;
+  animation-direction: alternate;
+  border-width: 8px;
   background-color: #05386B;
 
 }

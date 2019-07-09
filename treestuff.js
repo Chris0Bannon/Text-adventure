@@ -37,7 +37,7 @@
   plotMessage[7] = "just trying this out8";
   plotMessage[8] = "just trying this out9";
 
-  //Blocked path messages add in array for specific locations
+  //Blocked path messages array for specific locations
   let blockedPathMessages = [];
   blockedPathMessages[0] = "You can't go that way!";
   blockedPathMessages[1] = "Don'go north anymore, there is nothing cool over there.";
@@ -48,6 +48,18 @@
   blockedPathMessages[6] = "You should really stick with the puppy.  he is probably a plot device of some sort to guide your adventure.  Try heading north or east to follow him.";
   blockedPathMessages[7] = "you're definetly headed the wrong way.  Try something else.";
   blockedPathMessages[8] = "Careful!  The edge of the earth is over there! Dont fall off!";
+
+  //dialogue box for specific locations
+  let dialogue = [];
+  dialogue[0] = "this is some sample dialogue."
+  dialogue[1] = "this is some sample dialogue."
+  dialogue[2] = "this is some sample dialogue."
+  dialogue[3] = "this is some sample dialogue."
+  dialogue[4] = "this is some sample dialogue."
+  dialogue[5] = "this is some sample dialogue."
+  dialogue[6] = "this is some sample dialogue."
+  dialogue[7] = "this is some sample dialogue."
+  dialogue[8] = "this is some sample dialogue."
 
 
   // set players start locations
@@ -61,7 +73,7 @@
 
   //Create and array of actions that the game understands
   //and a variable to store the current action
-  let actionIKnow = ["north", "east", "south", "west"];
+  let actionIKnow = ["north", "east", "south", "west", "speak", "search"];
   let action = "";
 
   //The input and output fields
@@ -152,6 +164,11 @@
     else {
       gameMessage = blockedPathMessages[mapLocation];
     }
+    break;
+
+    case "speak":
+    plotMessage = dialogue[mapLocation];
+  
     break;
 
       default:
