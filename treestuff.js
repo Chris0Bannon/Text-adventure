@@ -14,7 +14,6 @@
 
   //Create the images
   let images = [];
-
   images[0] = "deepWood.jpg";
   images[1] = "treefolksCrossing.jpg";
   images[2] = "cronesHut.jpg";
@@ -57,7 +56,7 @@
   dialogue[3] = "this is some sample dialogue."
   dialogue[4] = "this is some sample dialogue."
   dialogue[5] = "this is some sample dialogue."
-  dialogue[6] = "this is some sample dialogue."
+  dialogue[6] = "You call out to the pup, but it is already gone."
   dialogue[7] = "this is some sample dialogue."
   dialogue[8] = "this is some sample dialogue."
 
@@ -73,7 +72,7 @@
 
   //Create and array of actions that the game understands
   //and a variable to store the current action
-  let actionIKnow = ["north", "east", "south", "west", "speak", "search"];
+  let actionIKnow = ["north", "east", "south", "west", "speak"];
   let action = "";
 
   //The input and output fields
@@ -167,8 +166,9 @@
     break;
 
     case "speak":
-    plotMessage = dialogue[mapLocation];
-  
+    plotMessage[mapLocation] = dialogue[mapLocation];
+    gameMessage = "enjoy the above dialogue!";
+
     break;
 
       default:
