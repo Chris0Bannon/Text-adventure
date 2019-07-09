@@ -122,7 +122,7 @@
     switch(action)
     {
       case "north":
-        if (mapLocation >= 3)
+        if (mapLocation == 8 || mapLocation == 4 || mapLocation ==6 )
         {
           gameMessage = "You went north!";
         mapLocation -= 3;
@@ -133,7 +133,7 @@
       break;
 
       case "east":
-      if (mapLocation % 3 != 2)
+      if (mapLocation % 3 != 2 && mapLocation != 3)
       {
       gameMessage = "You went east!";
       mapLocation += 1;
@@ -144,8 +144,7 @@
     break;
 
       case "south":
-      if (mapLocation < 6)
-      {
+      if (mapLocation == 3 || mapLocation == 1 || mapLocation == 5 )  {
       gameMessage = "you went south";
       mapLocation += 3;
     }
@@ -155,7 +154,7 @@
     break;
 
       case "west":
-      if (mapLocation % 3 != 0)
+      if (mapLocation % 3 != 0 && mapLocation != 4)
       {
       gameMessage = "You went west!";
       mapLocation -= 1;
