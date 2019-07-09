@@ -1,20 +1,30 @@
+@keyframes trippyborder {
+0% {border-style: dotted;}
+50% {border-style: dashed;}
+100% {border-style: solid;}
+from {border-color: #05386B;}
+to {border-color: #8EE4af;}
+}
+
 img {
   object-fit: contain;
   max-width: 70%;
   max-height: 70%;
+  border-style: double;
+  border-color: #8EE4af;
   display: block;
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 4px;
   margin-left: auto;
   margin-right: auto;
 }
 
-body {background-color: #007acc;}
+body {background-color: #379683;}
 
 h1{
   font-size: 48px;
   font-family: fantasy;
-  color: #4dff88;
+  color: #EDF5E1;
   text-align: center;
   margin-bottom: auto;
   margin-top: auto;
@@ -22,7 +32,7 @@ h1{
 
 h2{
   font-family: fantasy;
-  color: #4dff88;
+  color: #EDF5E1;
   text-align: center;
   margin-top: none;
   margin-bottom: none;
@@ -31,10 +41,12 @@ h2{
 }
 
  input{
+margin-top: 4px;
+font-size: 20px;
 display: block;
 margin-right: auto;
 margin-left: auto;
-height: 28px;
+height: 22px;
 width: 250px;
  }
 
@@ -42,10 +54,10 @@ button{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 5px solid #4dff88;
+  border: 5px solid #EDF5E1;
   padding:  20px 20px;
   font-size: 22px;
-  background-color: lightgrey;
+  background-color: #379683;
   border-radius: 50%;
 }
 
@@ -54,19 +66,24 @@ em{
 }
 
 #gameWindow{
-  border-style: groove;
+  animation-name: trippyborder;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  border-width: 10px;
+  background-color: #05386B;
 
 }
 
 #maps{
-
+  font-family: fantasy;
+  color: #EDF5E1;
 }
 
 #plotMessage{
   height: 100px;
   width: 640px;
   font-size: 20px;
-  background-color: lightgrey;
+  background-color: #379683;
   margin-bottom: none;
   margin-top: auto;
   margin-bottom: auto;
@@ -74,9 +91,16 @@ em{
 
 #gameMessage{
   font-size: 20px;
-  color: #cc8800;
+  width: 640px;
+  text-align: center;
+  height: 41px;
+  color: #EDF5E1;
+  background-color: #379683;
   font-style: bold;
-  text-decoration: underline;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: auto;
   margin-top: auto;
 }

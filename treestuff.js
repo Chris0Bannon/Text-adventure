@@ -57,7 +57,7 @@
   let playersInput = "";
 
   //initialize the gameMessage
-  let gameMessage = "";
+  let gameMessage = "Enter your command into the space below!";
 
   //Create and array of actions that the game understands
   //and a variable to store the current action
@@ -66,6 +66,8 @@
 
   //The input and output fields
   let output = document.querySelector("#output");
+  let outputPlot = document.querySelector("#outputPlot");
+  let outputMessage = document.querySelector("#outputMessage");
   let input = document.querySelector("#input");
 
   //The images
@@ -163,14 +165,14 @@
   function render ()
 {
   //Render the location
-  output.innerHTML = "<p id = maps>" + "You are now in the "  + map[mapLocation] + "</p>";
+  output.innerHTML = "<p id = maps>" + "You are now located in the "  + map[mapLocation] + "</p>";
 
   //Change the image source
   image.src = "images/" + images[mapLocation];
 
-  //Display  the plotMessage
-  output.innerHTML += "<textarea id = plotMessage>" + plotMessage[mapLocation] + "</textarea>";
+  //Display the plotMessage
+  outputPlot.innerHTML = "<textarea id = plotMessage>" + plotMessage[mapLocation] + "</textarea>";
 
   //Display the gameMessage
-  output.innerHTML += "<p id = gameMessage>" + gameMessage + "</p>";
+  outputMessage.innerHTML = "<textarea id = gameMessage>" + gameMessage + "</textarea>";
 }
