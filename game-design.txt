@@ -19,15 +19,25 @@ Plot: Ranger enters the map in square 7.  There the player encounters
 
 To do's;
 
-Monkey around with Css
-Create a dropdown box rather than a free entry input
+Alway be a Monkey around Css
 Make it so that commands with dual directions don't suck.
-Include instructions
-Somehow come up with story interaction.
-You gotta find a way to compose 8 bit loops, and then wip out 10 of them.
+Include good instructions
+add in plotMessages
+come up with better pathblockedmessages
+flesh out dialogue system
+how can the player make choices that will stick with them until later in the game?
+You gotta find a way to compose 8 bit loops, and then whip out 10 of them so each mapLocation can have its own audio.
 
 
 Thoughts and Notes;
+how the fuck will I add player choices?  simple yes or no choices.  probably use a boolean.
+
+how would an inventory system work? perhaps an empty array that would push objects in after the search function is used? some dialogue could push items into the array.  Then we could check that array later to see if an item is present to advance.
+
+pup/hound/wolf needs an identifying feature like coloful eyes or something that it is clear that the animal is the same creature, just maturing off stage.
+
+devoloper complains about the direwolfs being an invasive speices and they would make it difficult to sell tickets or roooms.  He should offer you cash for pelts.
+
 Dialogue from Father or hermit: "The trees here were my friends.  They had voices of their own.  They called these shores home long before you and yours were but seeds and acorns.  Perhaps their roots still tend their soil, though i can not hear their songs.  I hope that my deer friend river has carried their children far away to safety, and they shall someday sing downstream. I weep fresh sap for the lose of my family.  The face of Death is welcome in here in our home, but how he has chosen to wield your kind as his instrument, I cannot.  You were once the younger branches of our tree.  How the bough has changed since falling to the floor."
 
 Dialogue for mother or father:  "Hello my little nut.  It was not longer ago you sprung from our branches to travel far and grow a forest of your own.  time has changed you, as it does all things, but still i recognize you my child, and still i shall cradle you beneath the warmth of my branches."
