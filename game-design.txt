@@ -19,6 +19,10 @@ Plot: Ranger enters the map in square 7.  There the player encounters
 
 To do's;
 
+css the audio controls real nice
+create a start game screen
+we are gonna use multidimensional arrays to provide us with options!
+work on your art you goofball
 Alway be a Monkey around Css
 Make it so that commands with dual directions don't suck.
 Include good instructions
