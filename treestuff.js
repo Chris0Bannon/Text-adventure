@@ -60,7 +60,32 @@
   dialogue[7] = "this is some sample dialogue."
   dialogue[8] = "this is some sample dialogue."
 
-//game audio
+  //array to determine if we have been to this mapLocation before
+
+  let revisitedLocations = [];
+
+ // function to add mapLocations we have been to into the revisitedLocations array
+  function revisitedMapLocation (mapLocation){
+      revisitedLocations.push(mapLocation);
+      console.log(revisitedLocations);
+  }
+
+// functino to check revisitedLocations for mapLocation and then add in if not
+function checkForMapReturn (mapLocation){
+ for (let i = 0; i < revisitedLocations.length; i++) {
+     console.log('in checkForMapReturn', mapLocation);
+   if (revisitedLocations[i] == mapLocation){
+     console.log('im not stupid');
+     console.log(i);
+     return true;
+   }
+ }
+ revisitedMapLocation(mapLocation);
+ return;
+}
+
+
+//game music
 let audios = [];
 audios[0] = "treesong.mp3"
 
@@ -180,12 +205,16 @@ audios[0] = "treesong.mp3"
       gameMessage = "Sorry, I dont know what " + playersInput + " is, try it again silly!";
     }
 
+
+
     //Render the game
     render();
   }
 
   function render ()
 {
+checkForMapReturn(mapLocation);
+
   //Render the location
   output.innerHTML = "<p id = maps>" + "You are now located in the "  + map[mapLocation] + "</p>";
 

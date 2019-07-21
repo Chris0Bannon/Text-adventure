@@ -10,6 +10,7 @@ img {
   object-fit: contain;
   max-width: 70%;
   max-height: 70%;
+  padding 5px;
   animation-name: trippyborder;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -61,8 +62,12 @@ button{
   font-size: 22px;
   background-color: #379683;
   border-radius: 50%;
+  position: relative;
 }
 
+button: active{
+  top:3px;
+}
 
 em{
   font-size: 88px;
