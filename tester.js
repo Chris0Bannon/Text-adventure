@@ -58,7 +58,7 @@ revisitedMapLocation(3);
     }
   }
   revisitedMapLocation(mapLocation);
-  return;
+  return false;
 }
 
 checkForMapReturn(6);
@@ -69,10 +69,10 @@ function plotMessageOutputSelector (mapLocation){
   console.log('in plotMessageOutputSelector', mapLocation);
   if (checkForMapReturn(mapLocation)) {
     console.log('it was in there');
-    plotMessage = plotMessage[mapLocation + 10];
+    return plotMessage[mapLocation + 10];
   }
   else {
-    plotMessage = plotMessage[mapLocation];
+    return plotMessage[mapLocation];
   }
 }
 
