@@ -6,6 +6,11 @@ from {border-color: #05386B;}
 to {border-color: #8EE4af;}
 }
 
+#tunes{
+  display: flex;
+  justify-content: center;
+}
+
 img {
   object-fit: contain;
   max-width: 70%;

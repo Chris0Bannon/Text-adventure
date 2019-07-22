@@ -29,6 +29,8 @@ Include good instructions
 add in plotMessages
 come up with better pathblockedmessages
 flesh out dialogue system
+	-yo we can like add a second image for each maplocation if speach is called.
+		use the same functions that we used for checkForMapReturn etc.
 how can the player make choices that will stick with them until later in the game?
 You gotta find a way to compose 8 bit loops, and then whip out 10 of them so each mapLocation can have its own audio.
 

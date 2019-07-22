@@ -26,15 +26,27 @@
 
   //initialize the story
   let plotMessage = [];
-  plotMessage[0] = "idk my bff jill";
-  plotMessage[1] = "just trying this out2";
-  plotMessage[2] = "just trying this out3";
-  plotMessage[3] = "This area is overgrown with thorny brush that scraps and pulls at you as make your way forward.  You pull yourself into a small clearing that contains a hoveled yert.  a small coil of smoke seeps out from the dwellings roof.  It looks like someone may be home.";
-  plotMessage[4] = "just trying this out5";
-  plotMessage[5] = "just trying this out6";
-  plotMessage[6] = "You awaken to warm and wet tongue licking your face.  You eyes peel open and are greeted with the slobbery smile of an incredibly large puppy.  You look around at your surroundings as you climb to seated position.  You find yourself in an expansive clearing surronded by a thick forestline bathed in moonlight. You are without your compass and map, but as a forest ranger you are without worry.  As you climb to your feet the pup playfully runs into the treeline to your north west.  The pup pauses to look back to you before dissapearing into the shadows of the forest.";
-  plotMessage[7] = "just trying this out8";
-  plotMessage[8] = "just trying this out9";
+  plotMessage[0] = 'idk my bff jill';
+  plotMessage[1] = 'just trying this out2';
+  plotMessage[2] = 'just trying this out3';
+  plotMessage[3] = 'This area is overgrown with thorny brush that scraps and pulls at you as make your way forward.  You pull yourself into a small clearing that contains a hoveled yert.  a small coil of smoke seeps out from the dwellings roof.  It looks like someone may be home.';
+  plotMessage[4] = 'just trying this out5';
+  plotMessage[5] = 'just trying this out6';
+  plotMessage[6] = 'You awaken to warm and wet tongue licking your face.  You eyes peel open and are greeted with the slobbery smile of an incredibly large puppy.  You look around at your surroundings as you climb to seated position.  You find yourself in an expansive clearing surronded by a thick forestline bathed in moonlight. You are without your compass and map, but as a forest ranger you are without worry.  As you climb to your feet the pup playfully runs into the treeline to your north west.  The pup pauses to look back to you before dissapearing into the shadows of the forest.';
+  plotMessage[7] = 'just trying this out7';
+  plotMessage[8] = 'just trying this out8';
+  plotMessage[9] = 'i hope this never shows up9';
+  plotMessage[10] = 'ive been here before 0';
+  plotMessage[11] = 'ive been here before1';
+  plotMessage[12] = 'ive been here before2';
+  plotMessage[13] = 'ive been here before3';
+  plotMessage[14] = 'ive been here before4';
+  plotMessage[15] = 'ive been here before5';
+  plotMessage[16] = "You return to the Forest's edge and find it vacant";
+  plotMessage[17] = 'ive been here before7';
+  plotMessage[18] = 'ive been here before8';
+  plotMessage[19] = 'i hope this doesnt show up19';
+  plotMessage[20] = 'i hope this doesnt show up20';
 
   //Blocked path messages array for specific locations
   let blockedPathMessages = [];
@@ -65,29 +77,49 @@
   let revisitedLocations = [];
 
  // function to add mapLocations we have been to into the revisitedLocations array
-  function revisitedMapLocation (mapLocation){
-      revisitedLocations.push(mapLocation);
-      console.log(revisitedLocations);
-  }
-
-// functino to check revisitedLocations for mapLocation and then add in if not
-function checkForMapReturn (mapLocation){
- for (let i = 0; i < revisitedLocations.length; i++) {
-     console.log('in checkForMapReturn', mapLocation);
-   if (revisitedLocations[i] == mapLocation){
-     console.log('im not stupid');
-     console.log(i);
-     return true;
-   }
+ function revisitedMapLocation (mapLocation){
+     revisitedLocations.push(mapLocation);
+     console.log(revisitedLocations);
  }
- revisitedMapLocation(mapLocation);
- return;
+
+// function to check revisitedLocations for mapLocation and then add in if not
+ function checkForMapReturn (mapLocation){
+  for (let i = 0; i < revisitedLocations.length; i++) {
+      console.log('in checkForMapReturn', mapLocation);
+    if (revisitedLocations[i] == mapLocation){
+      console.log('im not stupid');
+      console.log(i);
+      return true;
+    }
+  }
+  revisitedMapLocation(mapLocation);
+  return false;
 }
 
+// what plot message sould we display
+function plotMessageOutputSelector (mapLocation){
+  console.log('in plotMessageOutputSelector', mapLocation);
+  if (checkForMapReturn(mapLocation)) {
+    console.log('it was in there');
+    return plotMessage[mapLocation + 10];
+  }
+  else {
+    return plotMessage[mapLocation];
+  }
+}
 
 //game music
 let audios = [];
-audios[0] = "treesong.mp3"
+audios[0] = "treesong.mp3";
+audios[1] = "treesong.mp3";
+audios[2] = "treesong.mp3";
+audios[3] = "treesong.mp3";
+audios[4] = "treesong.mp3";
+audios[5] = "treesong.mp3";
+audios[6] = "treesong.mp3";
+audios[7] = "treesong.mp3";
+audios[8] = "treesong.mp3";
+
 
   // set players start locations
   let mapLocation = 6;
@@ -213,7 +245,7 @@ audios[0] = "treesong.mp3"
 
   function render ()
 {
-checkForMapReturn(mapLocation);
+
 
   //Render the location
   output.innerHTML = "<p id = maps>" + "You are now located in the "  + map[mapLocation] + "</p>";
@@ -221,10 +253,11 @@ checkForMapReturn(mapLocation);
   //Change the image source
   image.src = "images/" + images[mapLocation];
 
-  //Display the plotMessage
-  outputPlot.innerHTML = "<textarea id = plotMessage>" + plotMessage[mapLocation] + "</textarea>";
+//Display the plotMessage based off of previous player movement
+  outputPlot.innerHTML = "<textarea id = plotMessage>" + plotMessageOutputSelector(mapLocation) + "</textarea>";
 
   //Display the gameMessage
+
   outputMessage.innerHTML = "<textarea id = gameMessage>" + gameMessage + "</textarea>";
 
   //output audio

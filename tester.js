@@ -12,6 +12,8 @@ textarea explaining that
 
 */
 
+//HOLY SHIT YOU CAN RUN FOR LOOPS BACKWARDS AND THEY DONT HAVE TO START AT 0
+
 let revisitedLocations = [];
 
 let plotMessage = [];
