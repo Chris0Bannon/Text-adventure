@@ -5,11 +5,14 @@
 // the specific things i want with simpler functions.
 //i could srsly just have everything be [mapLocation.what i want]
 
+// or we could have a switch function that outputs a different value from the array based
+// the case 
+
 // we need a a new function to decide if we are outputting the plotMessage
 //or the dialogue into the text area.. .
 //we meed another function to determine what dialogue value willbe out input
 // we will likely need to make the output from the speach case of our switch function
-// to me someething novel to allow this.
+// to me something novel to allow this.
 
 
 function dialogueOutputSelector() {
