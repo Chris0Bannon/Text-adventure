@@ -1,83 +1,30 @@
-
-
-
-/* everytime we arrive at a map location we need to check a seperate revisitedLocation
-array to see if we have been there before, if we have not been there before, then we need
-to push our current maplocation index value into that array.
-
-When choosing what plotMessage to output, we should check revisitedLocation to see if it
-contains a value matching our mapLocation index.  If it does,then we would convert our plotMessage
-variable into a seperate string from a third array.  Then output that to our plotMessage
-textarea explaining that
-
-*/
-
 //HOLY SHIT YOU CAN RUN FOR LOOPS BACKWARDS AND THEY DONT HAVE TO START AT 0
+// Wait.... should redoo the entire project but instead make an array of maps 
+// only and then make the maps an object that have every other value in
+//them as a property?  it could be more effecient and easier to call
+// the specific things i want with simpler functions.
+//i could srsly just have everything be [mapLocation.what i want]
 
-let revisitedLocations = [];
-
-let plotMessage = [];
-plotMessage[0] = "here is sample stuff";
-plotMessage[1] = "here is sample stuff";
-plotMessage[2] = "here is sample stuff";
-plotMessage[3] = "here is sample stuff";
-plotMessage[4] = "here is sample stuff";
-plotMessage[5] = "here is sample stuff";
-plotMessage[6] = "here is sample stuff";
-plotMessage[7] = "here is sample stuff";
-plotMessage[8] = "here is sample stuff";
-plotMessage[9] = "hurray it worked";
-plotMessage[10] = "hurray it workedhere is sample stuff";
-plotMessage[11] = "hurray it workedhere is sample stuff";
-plotMessage[12] = "hurray it workedhere is sample stuff";
-plotMessage[13] = "hurray it workedhere is sample stuff";
-plotMessage[14] = "hurray it workedhere is sample stuff";
-plotMessage[15] = "hurray it workedhere is sample stuff";
-plotMessage[16] = "hurray it workedhere is sample stuff";
-plotMessage[17] = "hurray it workedhere is sample stuff";
-plotMessage[18] = "hurray it workedhere is sample stuff";
-plotMessage[19] = "hurray it workedhere is sample stuff";
+// we need a a new function to decide if we are outputting the plotMessage
+//or the dialogue into the text area.. .
+//we meed another function to determine what dialogue value willbe out input
+// we will likely need to make the output from the speach case of our switch function
+// to me someething novel to allow this.
 
 
-function revisitedMapLocation (mapLocation){
-    revisitedLocations.push(mapLocation);
-    console.log(revisitedLocations);
+function dialogueOutputSelector() {
+  plotMessage = dialogue[mapLocation];
+  gameMessage = "enjoy the above dialogue!";
 }
 
-revisitedMapLocation(6);
-revisitedMapLocation(9);
-revisitedMapLocation(3);
+function dialogueOrPlotMessageSelector( //what comes out of the speach case of our switch ){
+  if (mapLocation == dialogue) {
+    // run dialogueOutputSelector
+    //output dialouge
 
-
-
- function checkForMapReturn (mapLocation){
-  for (let i = 0; i < revisitedLocations.length; i++) {
-      console.log('in checkForMapReturn', mapLocation);
-    if (revisitedLocations[i] == mapLocation){
-      console.log('im not stupid');
-      console.log(i);
-      return true;
-    }
-  }
-  revisitedMapLocation(mapLocation);
-  return false;
-}
-
-checkForMapReturn(6);
-checkForMapReturn(4);
-checkForMapReturn(3);
-
-function plotMessageOutputSelector (mapLocation){
-  console.log('in plotMessageOutputSelector', mapLocation);
-  if (checkForMapReturn(mapLocation)) {
-    console.log('it was in there');
-    return plotMessage[mapLocation + 10];
-  }
-  else {
-    return plotMessage[mapLocation];
+  } else {
+    //run plotMessageOutputSelector
+    //out put plotMessage
   }
 }
 
-
-
-/* outputPlot.innerHTML = "<textarea id = plotMessage>" + plotMessage[mapLocation] + "</textarea>"; */
